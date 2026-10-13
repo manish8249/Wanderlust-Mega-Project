@@ -3,7 +3,8 @@ def call() {
 
     dependencyCheck(
         additionalArguments: '--scan . --format XML --out dependency-check-report --disableYarnAudit --disableNodeAudit',
-        odcInstallation: 'dp-check'
+        odcInstallation: 'dp-check',
+        nvdCredentialsId: 'NVD_API_KEY'
     )
 
     dependencyCheckPublisher(
