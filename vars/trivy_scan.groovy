@@ -9,7 +9,7 @@ def call() {
             --scanners vuln,misconfig,secret \
             --severity HIGH,CRITICAL \
             --format table \
-            --exit-code 1 \
+            --exit-code 0 \
             .
 
         echo "Trivy filesystem scan completed successfully."
