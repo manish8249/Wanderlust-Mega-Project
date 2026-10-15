@@ -1,11 +1,12 @@
-# Stage 1
+i# Stage 1
 FROM node:21 AS backend-builder
 
 # setup the working dir
 WORKDIR /app
 
 # code
-COPY . .
+COPY package.json package-lock.json ./
+copy src/ ./src/
 
 # packages install
 RUN npm i
